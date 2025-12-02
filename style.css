@@ -71,6 +71,7 @@ h2 {
   margin-left: 60px;
   margin-top: 40px;
   margin-bottom: 0px;
+  Display: block;
 }
 h3 {
   text-align: justify;
@@ -440,13 +441,13 @@ button {
   font-size: 20px;
 }
 
-button:hover {
+
+  button:hover {
   background-color:  #d9dee0;
   border: 1px solid  #1dbaf3;
-  display: block;
-  border-radius: 6px;
-  text-align: center;
   cursor: pointer;
+}
+
   
 }
 p.cgpa {
@@ -472,11 +473,27 @@ p.cgpa {
 }
 
 .home-button:hover {
-  transform: scale(1.1);
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #2db6ec;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.2s;
+  display: flex;       
+  margin: 0;           
+  width: auto;         
+  height: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-button img {
   width: 32px;   /* Adjust icon size */
   height: 32px;
 }
+
 
