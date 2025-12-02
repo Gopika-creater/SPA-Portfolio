@@ -43,3 +43,26 @@ function toggleCGPA(id,btn) {
 }
 
 }
+function toggleMore() {
+  let moreText = document.getElementById('moreText');
+  let btn = document.getElementById('toggleBtn');
+
+  if (moreText.style.display === "none") {
+    moreText.style.display = "block";
+    btn.textContent = "Show Less";
+  } else {
+    moreText.style.display = "none";
+    btn.textContent = "Show More";
+  }
+}
+
+function scrollLeft() {
+    document.querySelector(".recommendations-wrapper")
+            .scrollBy({ left: -320, behavior: "smooth" });
+  }
+
+function scrollRight() {
+    document.querySelector(".recommendations-wrapper")
+            .scrollBy({ left: 320, behavior: "smooth" });
+  }
+
