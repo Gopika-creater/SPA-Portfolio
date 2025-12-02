@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Gopika - Portfolio</title>
@@ -13,7 +14,7 @@
           Gopika S.K
           <div class="contact_info">
             <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000" >
-          gopika2272005@gmail.com
+          gopika.2272005@gmail.com
         </div>
         <div style="clear:both;"></div>
         <div class="contact_info">
@@ -46,13 +47,18 @@
             I am an aspiring full-stack developer skilled in Python, Flask, React, SQL, and cloud technologies. 
             With a background in Computer and Communications Engineering, I build scalable web applications, secure APIs, and data-driven solutions.
             I focus on clean architecture, debugging, testing, and delivering reliable software that solves real-world problems.</br>
+          </p>  
+          
+          <p id="moreText" style="display: none;">
 
-          
-          
             I learn rapidly and thrive in dynamic environments where teamwork and communication matter. 
             I'm comfortable leading when required, coordinating tasks, and supporting my teammates to achieve shared goals.
-             I bring a positive, collaborative approach to every project I work on.
+            I bring a positive, collaborative approach to every project I work on.
+            Beyond coding, I enjoy exploring new technologies, improving UI/UX designs, and solving system-level problems. 
+            I take pride in writing clean, readable code and continuously improving my skills to become a better engineer every day.
           </p>
+          <button id="toggleBtn" class="showmore-btn" onclick="toggleMore()">Show More</button>
+          
       </div>
     </section>
     <!--Education-->
@@ -293,34 +299,36 @@
           <div class="project-card">
             <h3>TIME SHEET MANAGEMENT SYSTEM (FULL-STACK WEB APPLICATION)</h3>
             <ul>
-              <li>Led the end-to-end development of a role-based full-stack application using Flask, HTML, CSS, JavaScript, and MySQL.
-                 Designed 15+ optimised database tables, improving backend efficiency. Developed secure login authentication with dynamic dashboards. 
-                 Improved data accuracy by 85% and reduced manual entry errors by 70%.</li>
+              <li>Designed a complete role-based Time Sheet Management System using Flask, MySQL, HTML, CSS, JavaScript, and REST APIs.
+                 Built 15+ optimised relational tables, improving query performance and backend efficiency. Implemented secure authentication, session management, 
+                 and dynamic dashboards for Admin and Employees. Automated salary, attendance, shift, and performance tracking workflows—increasing data accuracy 
+                 by 85% and cutting manual entry errors by 70%.</li>
             </ul>
           </div>
           <hr>
           <div class="project-card">
-            <h3>AIR QUALITY MONITORING AND PREDICTION SYSTEM (MACHINE LEARNING) </h3>
+            <h3>AIR QUALITY MONITORING AND ANALYSIS SYSTEM (MACHINE LEARNING) </h3>
             <ul>
-              <li>Collaborated with team of four to implement ML models (Random Forest, SVM), achieving 92% prediction accuracy.
-                 Automated preprocessing using Pandas and NumPy, reducing manual effort by 80%. 
-                 Deployed an interactive visualisation using Matplotlib.</li>
+              <li>Developed an ML-based system to monitor and predict pollutant levels using Random Forest and SVM, achieving 92% prediction accuracy. 
+                Automated end-to-end data processing using Pandas, NumPy, and Scikit-Learn, cutting manual preprocessing time by 80%. 
+                Implemented trend analysis with Matplotlib to help visualise pollution patterns and support environmental decision-making.</li>
             </ul>
           </div>
           <hr>
           <div class="project-card">
             <h3>VOICE-INTERACTIVE IOT CHATBOT (AI + HARDWARE INTEGRATION) </h3>
             <ul>
-              <li>Built a voice-enabled chatbot using OpenAI STT/TTS APIs.
-                 Integrated Arduino Uno for real-time IoT-based responses. 
-                 Delivered less than 2 seconds latency with 90% STT accuracy.</li>
+              <li>Engineered a real-time voice-enabled IoT chatbot combining Arduino Uno and OpenAI’s Whisper SST/TTS APIs for intelligent speech interaction. 
+                Developed robust audio pipelines for real-time processing and hardware-triggered actions, achieving less than 2 seconds latency and 90% STT accuracy. 
+                Enabled hands-free control for IoT devices, enhancing accessibility and automation across environments.</li>
             </ul>
           </div>
           <div class="project-card">
             <h3>AI-BASED EMOTION DETECTION WEB APP </h3>
             <ul>
-              <li>Developed a Flask web app using IBM Watson Emotion Detection API.
-                  Implemented REST API endpoints with structured error handling and built a responsive UI for seamless user experience. 
+              <li>Developed an interactive AI-driven web application using Flask and IBM Watson Emotion Detection API to analyse user text and deliver real-time emotion insights. 
+                Built REST endpoints with structured validation and error handling, and crafted a fully responsive front-end for smooth user interaction. 
+                Designed for applications in customer support, mental health analytics, and sentiment-aware user interfaces.
               </li>
             </ul>
           </div>
@@ -332,7 +340,7 @@
     <section id="recommendations">
       <h2>Recommendations</h2>
       <div style="clear:both;"></div>
-      <div class="all_recommendations" id="all_recommendations">
+      
         <div class="recommendation">
           <span>&#8220;</span>
           Gopika has shown exceptional aptitude in learning web development concepts quickly and effectively.
@@ -341,22 +349,25 @@
 .
           <span>&#8221;</span>
         </div>
-        <div class="recommendation">
-          <span>&#8220;</span>
-          Working with Gopika has been an outstanding experience. 
-          She is highly knowledgeable and consistently goes above and beyond to ensure tasks are completed with precision. 
-          Her dedication and expertise make her a valuable contributor to any project. 
+        
+  
+      <div class="recommendations-section">
+           <!-- Left scroll button -->
+        <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button>
 
+           <!-- Scrollable wrapper -->
+          <div class="recommendations-wrapper">
+             <div class="all_recommendations" id="all_recommendations">
+                <!-- Firebase-loaded recommendation cards will appear here -->
+              </div>
+          </div>
 
-          <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-          <span>&#8220;</span>
-          I had the opportunity to work alongside Gopika during the early stages of our venture, which required extensive web development. 
-          She proved to be a highly dedicated professional with deep domain knowledge and a strong work ethic. 
-          <span>&#8221;</span>
-        </div>
+        <!-- Right scroll button -->
+        <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button>
       </div>
+</section>
+
+
     </section>
 
     <!-- Recommendation Form -->
@@ -373,21 +384,105 @@
       </div>
     </section>
 
-    <div class="iconbutton">
+    <div class="home-button">
       <a href="#home">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <!--Add the code here for the logo to appear and the icon to be actionable-->
+         <img src="https://img.icons8.com/?size=100&id=119120&format=png&color=000000" alt="Home Icon">
       </a>
     </div>
 
+
+
     <div class="popup" id="popup" class="flex_center">
-      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <img src="https://img.icons8.com/?size=100&id=QxQohul6NnVe&format=png&color=000000"/>
       <h3>Thanks for leaving recommendations</h3>
       <button onclick="showPopup(false)">Ok</button>
     </div>
-  </body>
+    
+      
+      
+      
+      
+      <script type="module">
 
+        // Imports
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+        import {
+        getFirestore,
+        collection,
+        addDoc,
+        getDocs,
+        query,
+        limit
+        } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+// Firebase config
+        const firebaseConfig = {
+        apiKey: "AIzaSyAi1nEjvdzRDwJ1SmkL5V0McKZNfGuFjbI",
+        authDomain: "portfoliorecommendations-101cc.firebaseapp.com",
+        projectId: "portfoliorecommendations-101cc",
+        storageBucket: "portfoliorecommendations-101cc.firebasestorage.app",
+        messagingSenderId: "659145837054",
+        appId: "1:659145837054:web:81c944c0171b9fe154d8af",
+        measurementId: "G-2PG3TLQV1Y"
+        };
+
+// Init Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+// Add recommendation
+        window.addRecommendation = async function () {
+        const name = document.getElementById("Name").value.trim();
+        const message = document.getElementById("new_recommendation").value.trim();
+
+        if (!name || !message) {
+        alert("Please fill both fields");
+         return;
+        }
+
+        await addDoc(collection(db, "recommendations"), {
+        Name: name,
+        recommendations: message
+        });
+
+        showPopup(true);
+
+        document.getElementById("Name").value = "";
+        document.getElementById("new_recommendation").value = "";
+
+          loadRecommendations();
+        };
+
+// Load recommendations
+        async function loadRecommendations() {
+        const container = document.getElementById("all_recommendations");
+        container.innerHTML = "";
+
+        const q = query(collection(db, "recommendations"), limit(10));
+        const querySnapshot = await getDocs(q);
+
+        querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        const block = document.createElement("div");
+        block.className = "recommendation";
+
+        block.innerHTML = `
+          <span>&#8220;</span>
+         ${data.recommendations} <br>
+         — <strong>${data.Name}</strong>
+         <span>&#8221;</span>
+        `;
+
+         container.appendChild(block);
+        });
+      }
+
+// run once at page load
+      loadRecommendations();
+
+    </script>
+
+ </body>
 </html>
-
