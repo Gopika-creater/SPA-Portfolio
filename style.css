@@ -118,7 +118,25 @@ h3 {
   font-size: 25px;
   color: rgb(128, 128, 128);
   margin-top: -1cm;
+  margin: 12px 0;       /* spacing above and below each paragraph */
+  line-height: 1.6;     /* improves readability */
 }
+.showmore-btn {
+  background-color: #fff;
+  border: 2px solid #2db6ec;
+  color: #2db6ec;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.showmore-btn:hover {
+  font-weight: bold;
+  border-width: 2px;
+}
+
 
 .profile_image {
   width: 550px;
@@ -223,17 +241,40 @@ h3 {
 }
 
 /* Recommendations */
+.recommendations-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.recommendations-wrapper {
+  flex: 1;              /* take remaining space */
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.scroll-btn {
+  background-color: #2db6ec;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 0 10px;
+  transition: 0.2s ease;
+}
+
+
+
 
 .all_recommendations {
   display: flex;
-  align-items: center;
-  margin-left: 1in;
-  flex-direction: row;
-  flex-flow: wrap;
-  padding: 20px;
+  gap: 15px;
 }
 
 .recommendation {
+  display: flex;            
   font-style: italic;
   text-align: left;
   width: 21.875rem;
@@ -241,12 +282,15 @@ h3 {
   background-color: #fff;
   border-radius: 11px;
   box-shadow: 0 3px 10px var(--primary-shadow);
-  padding: 20px;
-  margin: 10px;
-  border:1px solid gray;
+  border: 1px solid gray;
   font-size: 18px;
-  height:150px
+  min-height: 150px; 
+  white-space: normal;       /* allow multiple lines */
+  word-wrap: break-word;     /* break long words */
+  overflow-wrap: break-word;
+          
 }
+
 
 .recommendation span {
   color: #2db6ec;
@@ -365,14 +409,20 @@ input, textarea {
 }
 
 fieldset {
-  display: flexbox;
-  align-content: center;
-  justify-content: center;  
-  padding: 25px; 
-  margin-left: 50px; 
-  margin-right: 50px;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
   border: thin solid white;
   width: 50%;
+  box-sizing: border-box;
+}
+
+fieldset, .flex_center, #contact {
+  will-change: transform;
 }
 
 /* Buttons */
@@ -397,7 +447,7 @@ button:hover {
   border-radius: 6px;
   text-align: center;
   cursor: pointer;
-  margin: 0; 
+  
 }
 p.cgpa {
     display: none; 
@@ -405,3 +455,28 @@ p.cgpa {
     
     color: #e64495;
 }
+.home-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #2db6ec;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-button:hover {
+  transform: scale(1.1);
+}
+
+.home-button img {
+  width: 32px;   /* Adjust icon size */
+  height: 32px;
+}
+
