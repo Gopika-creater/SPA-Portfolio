@@ -157,7 +157,7 @@ h3 {
 }
 
 .skill-section h3 {
-  font-size: 24px;
+  font-size: 30px;
   color: #2db6ec;
   margin-bottom: 20px;
   display:block;
@@ -529,6 +529,7 @@ button {
   width: 32px;   /* Adjust icon size */
   height: 32px;
 }
+
 
 
 
