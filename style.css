@@ -254,20 +254,28 @@ h3 {
   white-space: nowrap;
   scroll-behavior: smooth;
 }
-.scroll-btn {
-  background-color: #2db6ec;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 22px;
-  cursor: pointer;
-  border-radius: 6px;
-  margin: 0 10px;
-  transition: 0.2s ease;
+.recommendations-wrapper::-webkit-scrollbar {
+  height: 10px;        /* Horizontal scrollbar height */
 }
 
+.recommendations-wrapper::-webkit-scrollbar-track {
+  background: #d9f3ff; /* Light track color */
+  border-radius: 10px;
+}
 
+.recommendations-wrapper::-webkit-scrollbar-thumb {
+  background: #2db6ec; /* Scroll thumb color */
+  border-radius: 10px;
+}
 
+.recommendations-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #1a97c9; /* Darker on hover */
+}
+
+.recommendations-wrapper {
+  scrollbar-width: thin;              /* "auto" | "thin" | "none" */
+  scrollbar-color: #2db6ec #d9f3ff;   /* thumb | track */
+}
 
 .all_recommendations {
   display: flex;
@@ -279,6 +287,9 @@ h3 {
   font-style: italic;
   text-align: left;
   width: 21.875rem;
+  min-width: 21.875rem;
+  max-width: 21.875rem;
+  height:300;
   padding: 1rem;
   background-color: #fff;
   border-radius: 11px;
@@ -450,10 +461,11 @@ button {
 
   
 }
-p.cgpa {
-     
-    font-size: 30px;
-    color: #2db6ec;
+.cgpa {
+    display: none;
+    font-size: 22px;
+    color: #46a6e6 ;
+    font-weight: 600;
 }
 
 .home-button {
@@ -495,6 +507,7 @@ p.cgpa {
   width: 32px;   /* Adjust icon size */
   height: 32px;
 }
+
 
 
 
